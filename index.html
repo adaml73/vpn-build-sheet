@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<header>IKE ISAKMP Phase 1</header>
+	<P>encryption</P>
+	<form>
+	<select id="phase 1 encryption">
+       <option value="aes">aes</option>
+       <option value="aes-192">aes-192</option>
+       <option value="aes-265">aes-256</option>
+       <option value="des">des</option>
+       <option value="3des">3des</opiton>
+    </select>
+</form>
+<button type="button" onclick="addEncryptionOption()">Add Encryption Option</button>
+<script>
+	function addEncryptionOption() {
+		var input = prompt("enter encryption setting");
+		var x = document.getElementById("phase 1 encryption");
+		var option = document.createElement("option");
+		option.text = input;
+		x.add(option);
+	}
+</script>
+
+<p>hash algorithm</p>
+<form>
+		<select id="phase 1 hash">
+			<option value="sha-1">sha-1</option>
+			<option value="md5">md5</option>
+		</select>
+	</form>
+	<b>
+	<button type="button" onclick="addHashOption()">Add Encryption Option</button>
+<script>
+	function addHashOption() {
+		var input = prompt("enter hash setting");
+		var x = document.getElementById("phase 1 hash");
+		var option = document.createElement("option");
+		option.text = input;
+		x.add(option);
+	}
+</script>
+<p>Diffie hellman group</p>
+<form>
+		<select id="Diffie Hellman Group">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="5">5</option>
+		</select>
+	</form>
+	<b>
+	<button type="button" onclick="addDHOption()">Add Encryption Option</button>
+<script>
+	function addDHOption() {
+		var input = prompt("Enter Diffie-Hellman group");
+		var x = document.getElementById("Diffie Hellman Group");
+		var option = document.createElement("option");
+		option.text = input;
+		x.add(option);
+	}
+</script>
+<b>
+<header>Your encryption domain</header>
+<form>
+<textarea name="textarea" placeholder="Ex: 192.168.1.5 or 192.168.1.0/25" required style="width:250px;height:150px;"></textarea>
+</form>
